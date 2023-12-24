@@ -1,0 +1,9 @@
+---
+- name: System Patch
+  hosts: all
+  tasks:
+    - name: Perform full patching
+      package:
+        name: "*"
+        state: lastest
+          
