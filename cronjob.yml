@@ -1,0 +1,9 @@
+---
+- name: cron jobs
+  hosts: all
+  tasks:
+    - cron:
+        name: "Send a message to log"
+        minute: "/2"
+        job: logger "Hello in progress"
+        state: present
